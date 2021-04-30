@@ -6,31 +6,47 @@
 <title>number</title>
 </head>
  
-<body id="output">
+<body >
 <textarea style="height: 300px;" type="text" id="txt1" ></textarea>
 <input type="button" value="提交" id="btn1">
+<textarea id="output" style="height: 300px;" type="text" id="txt1" ></textarea>
+<input type="button" onclick="copyLink();" value="点击复制"></input>
 <script>
- 
+
 var txt1=document.getElementById("txt1");
 var btn1=document.getElementById("btn1");
+
 btn1.onclick=function(){
     var nums=txt1.value.split("\n");//用空格分割字符串
     var str1 = "1";
     var str2 = "";
     var str3 = "";
     var temp = 0
+
+
+
     for(var i=0;i<nums.length;i++){
     	
     	temp += parseInt(nums[i]);
     	if (!(isNaN(temp))){
 			str2 +=temp;
     			}
-    	str3+=str1+'----'+temp+'<br/>\n';
+    	str3+=str1+'----'+temp+"\n";
     	str1 = parseInt(temp)+parseInt(1);
     		}
+
         document.getElementById("output").innerHTML = str3;
+
     	}
+
+           function copyLink(){
+            var e = document.getElementById("output");
+            e.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            alert("复制成功！");
+        }
+        
 </script>
- 
+
 </body>
 </html>
