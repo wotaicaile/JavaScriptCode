@@ -1,4 +1,5 @@
-number.html:
+number.html:  
+此代码盈利16.6r
 纯js输入间隔生成编号。  
 例：  
 100  
@@ -12,4 +13,3 @@ number.html:
 ![image](https://user-images.githubusercontent.com/50273609/133199505-d22ee99c-24d6-41f5-96ee-8666b9283e2b.png)  
 2021/9/14:  
 最尾一行如果是空行，会出现null，原因是没有判断空行，有时间再解决这个bug  
-此代码盈利16.6r  
